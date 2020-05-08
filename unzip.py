@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import zipfile
 import argparse
@@ -17,7 +17,7 @@ def unzip(target,destination):
 
 
 target=args.target
-destination="./" if args.destination else args.destination
+destination="./" if not args.destination else args.destination
 print("Extracting",args.target,"into",destination)
 unzip(target,destination)
 print("Done!")
